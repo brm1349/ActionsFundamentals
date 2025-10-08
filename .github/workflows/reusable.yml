@@ -1,6 +1,6 @@
-name: Reusable Workflow
+name: Reusable workflow
 
-on: 
+on:
   workflow_call:
     inputs:
       who-to-greet:
@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Greet someone
         run: echo "Hello ${{ inputs.who-to-greet }}"
-      - name: Set Time
+      - name: Set time
         id: time
         run: echo "time=$(date)" >> $GITHUB_OUTPUT
 
